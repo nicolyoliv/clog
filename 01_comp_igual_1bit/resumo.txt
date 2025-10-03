@@ -1,0 +1,17 @@
+entrada:i0, i1;
+saida: eq
+
+
+eq = i0*i1 + i0'*i1'
+
+tabela 
+
+in    out
+i0 i1  eq
+0   0   1 linha1
+0   1   0 linha2
+1   0   0 linha3
+1   1   1 linha4
+
+p0 = linha1
+p1 = linha4
