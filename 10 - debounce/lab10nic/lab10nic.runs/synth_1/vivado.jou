@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Jul 11 11:57:35 2025
+# Process ID: 3228
+# Current directory: C:/Users/aluno/Documents/lab10nic/lab10nic.runs/synth_1
+# Command line: vivado.exe -log debounce_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source debounce_test.tcl
+# Log file: C:/Users/aluno/Documents/lab10nic/lab10nic.runs/synth_1/debounce_test.vds
+# Journal file: C:/Users/aluno/Documents/lab10nic/lab10nic.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source debounce_test.tcl -notrace

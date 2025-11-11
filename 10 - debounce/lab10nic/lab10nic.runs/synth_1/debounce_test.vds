@@ -1,0 +1,390 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Jul 11 11:57:35 2025
+# Process ID: 3228
+# Current directory: C:/Users/aluno/Documents/lab10nic/lab10nic.runs/synth_1
+# Command line: vivado.exe -log debounce_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source debounce_test.tcl
+# Log file: C:/Users/aluno/Documents/lab10nic/lab10nic.runs/synth_1/debounce_test.vds
+# Journal file: C:/Users/aluno/Documents/lab10nic/lab10nic.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source debounce_test.tcl -notrace
+Command: synth_design -top debounce_test -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13392 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 343.668 ; gain = 99.703
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-2489] overwriting existing secondary unit arch [C:/Users/aluno/Downloads/disp_hex_mux.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'debounce_test' [C:/Users/aluno/Documents/LAB10/debounce_test.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'disp_hex_mux' [C:/Users/aluno/Downloads/disp_hex_mux.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'disp_hex_mux' (1#1) [C:/Users/aluno/Downloads/disp_hex_mux.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'db_fsm' [C:/Users/aluno/Documents/LAB10/db_fsm.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'db_fsm' (2#1) [C:/Users/aluno/Documents/LAB10/db_fsm.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'debounce_test' (3#1) [C:/Users/aluno/Documents/LAB10/debounce_test.vhd:15]
+WARNING: [Synth 8-3917] design debounce_test has port an[7] driven by constant 1
+WARNING: [Synth 8-3917] design debounce_test has port an[6] driven by constant 1
+WARNING: [Synth 8-3917] design debounce_test has port an[5] driven by constant 1
+WARNING: [Synth 8-3917] design debounce_test has port an[4] driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 393.883 ; gain = 149.918
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 393.883 ; gain = 149.918
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Clock' is not supported in the xdc constraint file. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:7]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Buttons' is not supported in the xdc constraint file. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:41]
+CRITICAL WARNING: [Designutils 20-970] Unrecognized or unsupported command '***** CPU_reset button; active low' found in constraint file. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'reset_n'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Designutils 20-970] Unrecognized or unsupported command '***** Other buttons; active high' found in constraint file. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:45]
+CRITICAL WARNING: [Designutils 20-970] Unrecognized or unsupported command '***** btn(0): btnu;  btn(1): btnr;  btn(2): btnd; btn(3): btnl;  btn(4): btnc;' found in constraint file. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'btn[4]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/aluno/Documents/LAB10/Nexys4_DDR_chu.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/debounce_test_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/debounce_test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 746.402 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 746.402 ; gain = 502.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 746.402 ; gain = 502.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 746.402 ; gain = 502.438
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element q_reg_reg was removed.  [C:/Users/aluno/Downloads/disp_hex_mux.vhd:28]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'db_fsm'
+INFO: [Synth 8-5546] ROM "m_tick" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "db" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element q_reg_reg was removed.  [C:/Users/aluno/Documents/LAB10/db_fsm.vhd:39]
+WARNING: [Synth 8-6014] Unused sequential element q1_reg_reg was removed.  [C:/Users/aluno/Documents/LAB10/debounce_test.vhd:83]
+WARNING: [Synth 8-6014] Unused sequential element q0_reg_reg was removed.  [C:/Users/aluno/Documents/LAB10/debounce_test.vhd:84]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    zero |                              000 |                              000
+                 wait1_1 |                              001 |                              001
+                 wait1_2 |                              010 |                              010
+                 wait1_3 |                              011 |                              011
+                     one |                              100 |                              100
+                 wait0_1 |                              101 |                              101
+                 wait0_2 |                              110 |                              110
+                 wait0_3 |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'db_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 746.402 ; gain = 502.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+	  15 Input      3 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module debounce_test 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
+Module disp_hex_mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+Module db_fsm 
+Detailed RTL Component Info : 
++---Muxes : 
+	  15 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "db_unit/m_tick" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element disp_unit/q_reg_reg was removed.  [C:/Users/aluno/Downloads/disp_hex_mux.vhd:28]
+WARNING: [Synth 8-6014] Unused sequential element db_unit/q_reg_reg was removed.  [C:/Users/aluno/Documents/LAB10/db_fsm.vhd:39]
+WARNING: [Synth 8-6014] Unused sequential element q0_reg_reg was removed.  [C:/Users/aluno/Documents/LAB10/debounce_test.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element q1_reg_reg was removed.  [C:/Users/aluno/Documents/LAB10/debounce_test.vhd:83]
+WARNING: [Synth 8-3917] design debounce_test has port an[7] driven by constant 1
+WARNING: [Synth 8-3917] design debounce_test has port an[6] driven by constant 1
+WARNING: [Synth 8-3917] design debounce_test has port an[5] driven by constant 1
+WARNING: [Synth 8-3917] design debounce_test has port an[4] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 746.402 ; gain = 502.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 746.402 ; gain = 502.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 751.324 ; gain = 507.359
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 760.871 ; gain = 516.906
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 760.871 ; gain = 516.906
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 760.871 ; gain = 516.906
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 760.871 ; gain = 516.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 760.871 ; gain = 516.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 760.871 ; gain = 516.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 760.871 ; gain = 516.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    10|
+|3     |LUT1   |     4|
+|4     |LUT2   |    10|
+|5     |LUT3   |     4|
+|6     |LUT4   |    14|
+|7     |LUT5   |     3|
+|8     |LUT6   |    11|
+|9     |FDRE   |    59|
+|10    |IBUF   |     3|
+|11    |OBUF   |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------+-------------+------+
+|      |Instance    |Module       |Cells |
++------+------------+-------------+------+
+|1     |top         |             |   135|
+|2     |  db_unit   |db_fsm       |    39|
+|3     |  disp_unit |disp_hex_mux |    39|
++------+------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 760.871 ; gain = 516.906
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 760.871 ; gain = 164.387
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 760.871 ; gain = 516.906
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 35 Warnings, 24 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 760.871 ; gain = 529.879
+INFO: [Common 17-1381] The checkpoint 'C:/Users/aluno/Documents/lab10nic/lab10nic.runs/synth_1/debounce_test.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file debounce_test_utilization_synth.rpt -pb debounce_test_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 760.871 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 11 11:58:09 2025...
