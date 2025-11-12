@@ -1,11 +1,10 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Entidade: Somador Genérico de N bits
+-- Entidade: Somador Ripple Carry Genérico de N bits
 entity generic_adder is
-    -- GENERIC: Define a largura de bits (N)
     generic (
-        DATA_WIDTH : integer := 4  -- Padrão de 4 bits
+        DATA_WIDTH : integer := 4  -- Largura de bits
     );
     port(
         A_in  : in std_logic_vector(DATA_WIDTH - 1 downto 0);
@@ -17,21 +16,20 @@ entity generic_adder is
     );
 end generic_adder;
 
-architecture structural of generic_adder is
-    -- Sinal interno para a propagação do Carry (DATA_WIDTH bits para C1 até CN)
-    -- O CARRY(i) é o Carry Out do bit 'i' e o Carry In do bit 'i+1'
-    signal CARRY : std_logic_vector(DATA_WIDTH - 1 downto 0); 
+architecture structural_clean of generic_adder is
+    -- CARRY terá N+1 bits (C0 a CN). C(0) é o C_in inicial. C(N) é o C_out final.
+    signal CARRY : std_logic_vector(DATA_WIDTH downto 0); 
     
-    -- Declaração do componente de 1 bit
     component full_adder
         port(a, b, ci : in std_logic; co, s : out std_logic);
     end component;
     
 begin
     
-    -- -------------------------------------------------------------
-    -- 1. Loop de Geração (GENERATE): Cria os somadores do Bit 0 ao MSB
-    -- -------------------------------------------------------------
+    -- 1. O Carry In inicial (C0) é o C_in externo
+    CARRY(0) <= C_in;
+    
+    -- 2. Loop de Geração (GENERATE): Cria N Somadores Completo (Bit 0 ao N-1)
     G_ADDER : for i in 0 to DATA_WIDTH - 1 generate
         FA_i : entity work.full_adder(fa_arch)
         port map(
@@ -39,26 +37,12 @@ begin
             b  => B_in(i),
             s  => S_out(i),
             
-            -- Lógica do Carry In (Ci)
-            ci => CARRY_IN_i(i),   
-            
-            -- Lógica do Carry Out (Co)
-            co => CARRY_OUT_i(i)  
+            ci => CARRY(i),     -- Carry In é o CARRY do estágio 'i'
+            co => CARRY(i+1)    -- Carry Out é o CARRY do estágio 'i+1'
         );
     end generate G_ADDER;
     
-    -- -------------------------------------------------------------
-    -- 2. Conexões do Carry (Cadeia Ripple Carry)
-    -- -------------------------------------------------------------
-    -- O Carry In do Bit 0 é o C_in externo
-    CARRY(0) <= C_in;
+    -- 3. O Carry Out final (CN) é o último bit do vetor CARRY
+    C_out <= CARRY(DATA_WIDTH);
     
-    -- O Carry In do bit 'i' é o Carry Out do bit 'i-1'
-    C_CHAIN : for i in 1 to DATA_WIDTH - 1 generate
-        CARRY(i) <= CARRY(i-1); 
-    end generate C_CHAIN;
-    
-    -- O Carry Out final (CN) é o Carry Out do último Somador (MSB)
-    C_out <= CARRY(DATA_WIDTH - 1);
-    
-end structural;
+end structural_clean;
